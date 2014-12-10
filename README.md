@@ -11,11 +11,12 @@ We broke down the process of testing integer partitions to find new lower bounds
 The first step is generating prime numbers. The code for this step can be found in the genPrimes directory.
 
 File(s) Involved:
-	- primedriver.c
-	- primegen.c
-	- vdwheader.h
-	- makefile
 
-Executable: makefiles creates generatePrimes.exe
+    - primedriver.c
+    - primegen.c
+    - vdwheader.h
+    - makefile
+
+Executable: `makefile` creates `generatePrimes.exe`
 
 Notes: To change the upper bound for the prime-finding, you'll need to modify the body of the primedriver.c file. The primegen.c file uses the Sieve of Eratosthenes to find primes. The output of the executable is a file called 'primes' that contains one prime number per line, in ascending order.
