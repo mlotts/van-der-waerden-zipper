@@ -12,10 +12,10 @@ The first step is generating prime numbers. The code for this step can be found 
 
 File(s) Involved:
 
-    - primedriver.c
-    - primegen.c
-    - vdwheader.h
-    - makefile
+- primedriver.c
+- primegen.c
+- vdwheader.h
+- makefile
 
 Executable: `makefile` creates `generatePrimes.exe`
 
