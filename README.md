@@ -72,19 +72,22 @@ The fourth step is reading the report and determining which progressions are can
 #### Executable
 
 `reportreader.c` and `zippossibilityfilecreator.c` compile separately
-Notes: The `reportreader.c` file looks for the 'report' file generated in the previous step. It outputs a file called 'table' that contains the largest primes from 'report' that can be used to generate progression-free partitions with two, three, four, five, and six power classes. For each number of classes, the primes used to avoid progressions of length three through twelve are listed. After the 'table' file is created, the `zippossibilityfilecreator.c` file is used to create files of candidate primes that, after being zipped, can potentially be used to create larger progression-free partitions than those listed in the table. This file also looks for the 'report' file, and it requires editing of the code for the creation of each candidate file. For example, to generate a list of primes for zip testing for the case of six power classes and avoiding 5-progressions, you'll need to edit the following lines:
+
+#### Notes
+
+The `reportreader.c` file looks for the 'report' file generated in the previous step. It outputs a file called 'table' that contains the largest primes from 'report' that can be used to generate progression-free partitions with two, three, four, five, and six power classes. For each number of classes, the primes used to avoid progressions of length three through twelve are listed. After the 'table' file is created, the `zippossibilityfilecreator.c` file is used to create files of candidate primes that, after being zipped, can potentially be used to create larger progression-free partitions than those listed in the table. This file also looks for the 'report' file, and it requires editing of the code for the creation of each candidate file. For example, to generate a list of primes for zip testing for the case of six power classes and avoiding 5-progressions, you'll need to edit the following lines:
 
 ```
- //open the file that will contain the results of the zip analysis
- table = fopen("W6-5","w");
+//open the file that will contain the results of the zip analysis
+table = fopen("W6-5","w");
 		
-	//the prime indicated in 'table' as the largest for k=6, l=5
- targetprime = 14173;
+//the prime indicated in 'table' as the largest for k=6, l=5
+targetprime = 14173;
 
- //for zipping, divide by two; for double-zipping, divide by 4
- target = 14173/2;
+//for zipping, divide by two; for double-zipping, divide by 4
+target = 14173/2;
 
- //num partitions and progression length
- power = 6;
- prog = 5;
+//num partitions and progression length
+power = 6;
+prog = 5;
 ```
