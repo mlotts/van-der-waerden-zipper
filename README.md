@@ -66,7 +66,7 @@ The fourth step is reading the report and determining which progressions are can
 
  - `reportreader.c`
  - `zippossibilityfilecreator.c`
- - `vdwheader.c`
+ - `vdwheader.h`
 
 #### Executable
 
